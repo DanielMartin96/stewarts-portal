@@ -149,12 +149,16 @@ const ChooseColour = ({ setKey }) => {
   return (
     <Card>
       <Card.Header>
-        <h1>Choose your door colour:</h1>
+        <h1>
+          <b>Choose your door colour:</b>
+        </h1>
       </Card.Header>
       <Card.Body>
         <div>
           <div>
-            <h4>High Gloss</h4>
+            <h4>
+              <b>High Gloss</b>
+            </h4>
             <hr />
           </div>
           <div
@@ -184,7 +188,9 @@ const ChooseColour = ({ setKey }) => {
         </div>
         <div>
           <div>
-            <h4>Textured</h4>
+            <h4>
+              <b>Textured</b>
+            </h4>
             <hr />
           </div>
           <div
@@ -197,7 +203,10 @@ const ChooseColour = ({ setKey }) => {
           >
             {textured.map((colour) => {
               return (
-                <Card style={{ margin: "10px" }}>
+                <Card
+                  style={{ margin: "10px", cursor: "pointer" }}
+                  onClick={(e) => setKey("style")}
+                >
                   <Card.Header>
                     <h5>{colour.name}</h5>
                   </Card.Header>
@@ -211,7 +220,9 @@ const ChooseColour = ({ setKey }) => {
         </div>
         <div>
           <div>
-            <h4>Satin - Matt</h4>
+            <h4>
+              <b>Satin - Matt</b>
+            </h4>
             <hr />
           </div>
           <div
@@ -224,7 +235,10 @@ const ChooseColour = ({ setKey }) => {
           >
             {satinMatt.map((colour) => {
               return (
-                <Card style={{ margin: "10px" }}>
+                <Card
+                  style={{ margin: "10px", cursor: "pointer" }}
+                  onClick={(e) => setKey("style")}
+                >
                   <Card.Header>
                     <h5>{colour.name}</h5>
                   </Card.Header>
