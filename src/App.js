@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { Container, Tabs, Tab } from "react-bootstrap";
+
+import ChooseColour from "./components/ChooseColour/ChooseColour";
 
 function App() {
+  const [key, setKey] = useState("colour");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container
+      style={{
+        backgroundColor: "white",
+        marginTop: "10px",
+        borderRadius: "5px",
+        padding: "0px",
+      }}
+    >
+      <Tabs
+        id="controlled-tab-example"
+        activeKey={key}
+        onSelect={(k) => setKey(k)}
+      >
+        <Tab eventKey="colour" title="Colour">
+          <ChooseColour />
+        </Tab>
+        <Tab eventKey="style" title="Style">
+          Style
+        </Tab>
+        <Tab eventKey="size" title="Size">
+          Size
+        </Tab>
+      </Tabs>
+    </Container>
   );
 }
 
