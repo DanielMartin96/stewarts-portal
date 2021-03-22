@@ -83,9 +83,69 @@ const satinMatt = [
     src:
       "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-matt-denim.jpg",
   },
+  {
+    name: "Matt Mussel",
+    src:
+      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-matt-mussel.jpg",
+  },
+  {
+    name: "Matt Dove Grey",
+    src:
+      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-matt-dove-grey.jpg",
+  },
+  {
+    name: "Matt Cashmere",
+    src:
+      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-matt-cashmere.jpg",
+  },
+  {
+    name: "Matt Dakkar",
+    src:
+      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-matt-dakkar.jpg",
+  },
+  {
+    name: "Matt Stone Grey",
+    src:
+      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-matt-stone-grey.jpg",
+  },
+  {
+    name: "Matt Graphite",
+    src:
+      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-matt-graphite.jpg",
+  },
+  {
+    name: "Moldau Acacia",
+    src:
+      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-moldau-acacia.jpg",
+  },
+  {
+    name: "Canadian Maple",
+    src:
+      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-canadian-maple.jpg",
+  },
+  {
+    name: "Lissa Oak",
+    src:
+      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-lissa-oak.jpg",
+  },
+  {
+    name: "Paintable Vinyl",
+    src:
+      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-paintable-vinyl.jpg",
+  },
+  {
+    name: "Matt Dust Grey",
+    src:
+      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-matt-dust-grey.jpg",
+  },
+  {
+    name: "Matt Indigo Blue",
+    src:
+      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-matt-indigo-blue.jpg",
+  },
 ];
 
-const ChooseColour = () => {
+const ChooseColour = ({ setKey }) => {
   return (
     <Card>
       <Card.Header>
@@ -102,11 +162,15 @@ const ChooseColour = () => {
               display: "flex",
               flexWrap: "wrap",
               alignItems: "center",
+              justifyContent: "center",
             }}
           >
             {highGloss.map((colour) => {
               return (
-                <Card style={{ margin: "10px" }}>
+                <Card
+                  style={{ margin: "10px", cursor: "pointer" }}
+                  onClick={(e) => setKey("style")}
+                >
                   <Card.Header>
                     <h5>{colour.name}</h5>
                   </Card.Header>
@@ -128,6 +192,7 @@ const ChooseColour = () => {
               display: "flex",
               flexWrap: "wrap",
               alignItems: "center",
+              justifyContent: "center",
             }}
           >
             {textured.map((colour) => {
@@ -154,6 +219,7 @@ const ChooseColour = () => {
               display: "flex",
               flexWrap: "wrap",
               alignItems: "center",
+              justifyContent: "center",
             }}
           >
             {satinMatt.map((colour) => {

@@ -21,7 +21,7 @@ function App() {
         onSelect={(k) => setKey(k)}
       >
         <Tab eventKey="colour" title="Colour">
-          <ChooseColour />
+          <ChooseColour setKey={setKey} />
         </Tab>
         <Tab eventKey="style" title="Style">
           Style
