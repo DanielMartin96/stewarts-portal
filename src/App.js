@@ -1,10 +1,14 @@
 import { useState } from "react";
 import { Container, Tabs, Tab } from "react-bootstrap";
 
+import "./App.css";
 import ChooseColour from "./components/ChooseColour/ChooseColour";
+import ChooseStyle from "./components/ChooseStyle/ChooseStyle";
 
 function App() {
   const [key, setKey] = useState("colour");
+  const [colour, setColour] = useState("");
+  const [style, setStyle] = useState("");
 
   return (
     <Container
@@ -21,12 +25,20 @@ function App() {
         onSelect={(k) => setKey(k)}
       >
         <Tab eventKey="colour" title="Colour">
-          <ChooseColour setKey={setKey} />
+          <ChooseColour setKey={setKey} setColour={setColour} />
         </Tab>
-        <Tab eventKey="style" title="Style">
-          Style
+        <Tab
+          eventKey="style"
+          title="Style"
+          disabled={colour.length === 0 ? true : false}
+        >
+          <ChooseStyle setKey={setKey} colour={colour} setStyle={setStyle} />
         </Tab>
-        <Tab eventKey="size" title="Size">
+        <Tab
+          eventKey="size"
+          title="Size"
+          disabled={style.length === 0 ? true : false}
+        >
           Size
         </Tab>
       </Tabs>

@@ -13,6 +13,11 @@ const highGloss = [
       "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-high-gloss-cream.jpg",
   },
   {
+    name: "High Gloss Ivory",
+    src:
+      "https://www.kitchendoorworkshop.co.uk/public/images/doors/trends/swatches/thumb/trends-high-gloss-ivory.jpg",
+  },
+  {
     name: "Super White Ash",
     src:
       "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-super-white-ash.jpg",
@@ -145,7 +150,7 @@ const satinMatt = [
   },
 ];
 
-const ChooseColour = ({ setKey }) => {
+const ChooseColour = ({ setKey, setColour }) => {
   return (
     <Card>
       <Card.Header>
@@ -166,19 +171,25 @@ const ChooseColour = ({ setKey }) => {
               display: "flex",
               flexWrap: "wrap",
               alignItems: "center",
-              justifyContent: "center",
+              justifyContent: "space-evenly",
             }}
           >
-            {highGloss.map((colour) => {
+            {highGloss.map((colour, idx) => {
               return (
                 <Card
                   style={{ margin: "10px", cursor: "pointer" }}
-                  onClick={(e) => setKey("style")}
+                  onClick={(e) => {
+                    setKey("style");
+                    setColour(colour.name);
+                  }}
+                  key={idx}
                 >
                   <Card.Header>
-                    <h5>{colour.name}</h5>
+                    <h5 style={{ textAlign: "center" }}>{colour.name}</h5>
                   </Card.Header>
-                  <Card.Body>
+                  <Card.Body
+                    style={{ display: "flex", justifyContent: "center" }}
+                  >
                     <img src={colour.src} alt={colour.name} />
                   </Card.Body>
                 </Card>
@@ -198,19 +209,25 @@ const ChooseColour = ({ setKey }) => {
               display: "flex",
               flexWrap: "wrap",
               alignItems: "center",
-              justifyContent: "center",
+              justifyContent: "space-evenly",
             }}
           >
-            {textured.map((colour) => {
+            {textured.map((colour, idx) => {
               return (
                 <Card
                   style={{ margin: "10px", cursor: "pointer" }}
-                  onClick={(e) => setKey("style")}
+                  onClick={(e) => {
+                    setKey("style");
+                    setColour(colour.name);
+                  }}
+                  key={idx}
                 >
                   <Card.Header>
-                    <h5>{colour.name}</h5>
+                    <h5 style={{ textAlign: "center" }}>{colour.name}</h5>
                   </Card.Header>
-                  <Card.Body>
+                  <Card.Body
+                    style={{ display: "flex", justifyContent: "center" }}
+                  >
                     <img src={colour.src} alt={colour.name} />
                   </Card.Body>
                 </Card>
@@ -230,19 +247,25 @@ const ChooseColour = ({ setKey }) => {
               display: "flex",
               flexWrap: "wrap",
               alignItems: "center",
-              justifyContent: "center",
+              justifyContent: "space-evenly",
             }}
           >
-            {satinMatt.map((colour) => {
+            {satinMatt.map((colour, idx) => {
               return (
                 <Card
                   style={{ margin: "10px", cursor: "pointer" }}
-                  onClick={(e) => setKey("style")}
+                  onClick={(e) => {
+                    setKey("style");
+                    setColour(colour.name);
+                  }}
+                  key={idx}
                 >
                   <Card.Header>
-                    <h5>{colour.name}</h5>
+                    <h5 style={{ textAlign: "center" }}>{colour.name}</h5>
                   </Card.Header>
-                  <Card.Body>
+                  <Card.Body
+                    style={{ display: "flex", justifyContent: "center" }}
+                  >
                     <img src={colour.src} alt={colour.name} />
                   </Card.Body>
                 </Card>
