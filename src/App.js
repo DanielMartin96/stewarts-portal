@@ -4,6 +4,7 @@ import { Container, Tabs, Tab } from "react-bootstrap";
 import "./App.css";
 import ChooseColour from "./components/ChooseColour/ChooseColour";
 import ChooseStyle from "./components/ChooseStyle/ChooseStyle";
+import PriceCalculator from "./components/PriceCalculator/PriceCalculator";
 
 function App() {
   const [key, setKey] = useState("colour");
@@ -39,7 +40,7 @@ function App() {
           title="Size"
           disabled={style.length === 0 ? true : false}
         >
-          Size
+          <PriceCalculator style={style} />
         </Tab>
       </Tabs>
     </Container>

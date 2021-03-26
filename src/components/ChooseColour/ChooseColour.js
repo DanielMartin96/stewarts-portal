@@ -4,149 +4,121 @@ import { Card } from "react-bootstrap";
 const highGloss = [
   {
     name: "High Gloss White",
-    src:
-      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-high-gloss-white.jpg",
+    src: "",
   },
   {
     name: "High Gloss Cream",
-    src:
-      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-high-gloss-cream.jpg",
+    src: "",
   },
   {
     name: "High Gloss Ivory",
-    src:
-      "https://www.kitchendoorworkshop.co.uk/public/images/doors/trends/swatches/thumb/trends-high-gloss-ivory.jpg",
+    src: "",
   },
   {
     name: "Super White Ash",
-    src:
-      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-super-white-ash.jpg",
+    src: "",
   },
 ];
 
 const textured = [
   {
     name: "London Concrete",
-    src:
-      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-london-concrete.jpg",
+    src: "",
   },
   {
     name: "Opengrain White",
-    src:
-      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-opengrain-white.jpg",
+    src: "",
   },
   {
     name: "Oakgrain Cream",
-    src:
-      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-oakgrain-cream.jpg",
+    src: "",
   },
   {
     name: "Oakgrain Grey",
-    src:
-      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-oakgrain-grey.jpg",
+    src: "",
   },
   {
     name: "Oakgrain Cashmere",
-    src:
-      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-oakgrain-cashmere.jpg",
+    src: "",
   },
   {
     name: "Oakgrain Mussel",
-    src:
-      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-oakgrain-mussel.jpg",
+    src: "",
   },
 ];
 
 const satinMatt = [
   {
     name: "Satin White",
-    src:
-      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-satin-white.jpg",
+    src: "",
   },
   {
     name: "Porcelain White",
-    src:
-      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-porcelain-white.jpg",
+    src: "",
   },
   {
     name: "Alabaster",
-    src:
-      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-alabaster.jpg",
+    src: "",
   },
   {
     name: "Vanilla",
-    src:
-      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-vanilla.jpg",
+    src: "",
   },
   {
     name: "Ivory",
-    src:
-      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-ivory.jpg",
+    src: "",
   },
   {
     name: "Matt Denim",
-    src:
-      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-matt-denim.jpg",
+    src: "",
   },
   {
     name: "Matt Mussel",
-    src:
-      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-matt-mussel.jpg",
+    src: "",
   },
   {
     name: "Matt Dove Grey",
-    src:
-      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-matt-dove-grey.jpg",
+    src: "",
   },
   {
     name: "Matt Cashmere",
-    src:
-      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-matt-cashmere.jpg",
+    src: "",
   },
   {
     name: "Matt Dakkar",
-    src:
-      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-matt-dakkar.jpg",
+    src: "",
   },
   {
     name: "Matt Stone Grey",
-    src:
-      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-matt-stone-grey.jpg",
+    src: "",
   },
   {
     name: "Matt Graphite",
-    src:
-      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-matt-graphite.jpg",
+    src: "",
   },
   {
     name: "Moldau Acacia",
-    src:
-      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-moldau-acacia.jpg",
+    src: "",
   },
   {
     name: "Canadian Maple",
-    src:
-      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-canadian-maple.jpg",
+    src: "",
   },
   {
     name: "Lissa Oak",
-    src:
-      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-lissa-oak.jpg",
+    src: "",
   },
   {
-    name: "Paintable Vinyl",
-    src:
-      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-paintable-vinyl.jpg",
+    name: "Paintable",
+    src: "",
   },
   {
     name: "Matt Dust Grey",
-    src:
-      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-matt-dust-grey.jpg",
+    src: "",
   },
   {
     name: "Matt Indigo Blue",
-    src:
-      "https://www.kitchendoorworkshop.co.uk/public/images/doors/bella/swatches/thumb/bella-matt-indigo-blue.jpg",
+    src: "",
   },
 ];
 
