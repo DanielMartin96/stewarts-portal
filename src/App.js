@@ -2,13 +2,19 @@ import { useState } from "react";
 import { Container, Tabs, Tab } from "react-bootstrap";
 
 import "./App.css";
+// Importing of the functions that will be shown on the screen
 import ChooseColour from "./components/ChooseColour/ChooseColour";
 import ChooseStyle from "./components/ChooseStyle/ChooseStyle";
 import PriceCalculator from "./components/PriceCalculator/PriceCalculator";
 
+// The container function that is shown on the screen
 function App() {
+  // The apps state. When one of these changes, the content on the page is changed
+  // key and setKey are used for the tab system
   const [key, setKey] = useState("colour");
+  // colour is passed to the ChooseStyle component so it can find the right colour to show on screen. setColour is used on each card with an onClick event which will set the colour to that cards colour
   const [colour, setColour] = useState("");
+  // style will be used in the payment function so it can tell what min and max height is possible. setStyle is used on each card. Same as setColour
   const [style, setStyle] = useState("");
 
   return (

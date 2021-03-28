@@ -1,6 +1,7 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 
+// These arrays are where you would add new colours
 const highGloss = [
   {
     name: "High Gloss White",
@@ -122,6 +123,8 @@ const satinMatt = [
   },
 ];
 
+// What is shown in the colour tab. Whatever is returned is shown on the screen. Normal HTML and CSS works here
+// highGloss.map() is what maps through the highGloss array. It returns a new card with the neccessary information. So when you add new colours to each array it is automatically added
 const ChooseColour = ({ setKey, setColour }) => {
   return (
     <Card>

@@ -15,14 +15,18 @@ const aldridge = importAll(
   require.context("../../assets/images/aldridge", false, /.(png|jpe?g|svg)$/)
 );
 
+// imports all the images from the ashford folder in assets/images
 const ashford = importAll(
   require.context("../../assets/images/ashford", false, /.(png|jpe?g|svg)$/)
 );
 
+// imports all the images from the broadway folder in assets/images
 const broadway = importAll(
   require.context("../../assets/images/broadway", false, /.(png|jpe?g|svg)$/)
 );
 
+// Where all the colours and styles will be held. Will be a pretty long array. Each colour has an images array which will hold all the styles of that colour.
+// Alabaster is a good example of the functionality
 const styles = [
   {
     name: "High Gloss White",
@@ -475,6 +479,7 @@ const styles = [
 ];
 
 const ChooseStyle = ({ colour, setStyle, setKey }) => {
+  // this function takes in the colour that was picked on the previous tab and goes through the styles array and finds the colour. It then returns that colour and all the images relevant to that colour
   const findColour = (colour, styles) => {
     for (let i = 0; i < styles.length; i++) {
       if (colour === styles[i].name) {
@@ -483,12 +488,15 @@ const ChooseStyle = ({ colour, setStyle, setKey }) => {
     }
   };
 
+  // Find the right colour and assigns it to a variable which can be mapped through
   const relevantStyles = findColour(colour, styles);
 
+  // If no colour picked on previous screen, the page will show nothing
   if (colour.length === 0) {
     return <div></div>;
   }
 
+  // What is shown on the screen
   return (
     <Card>
       <Card.Header>
