@@ -45,6 +45,11 @@ const euroline = importAll(
   require.context("../../assets/images/euroline", false, /.(png|jpe?g|svg)$/)
 );
 
+// imports all the images from the euroline folder in assets/images
+const gothic = importAll(
+  require.context("../../assets/images/gothic", false, /.(png|jpe?g|svg)$/)
+);
+
 // Where all the colours and styles will be held. Will be a pretty long array. Each colour has an images array which will hold all the styles of that colour.
 // Alabaster is a good example of the functionality
 const styles = [
@@ -1166,7 +1171,6 @@ const ChooseStyle = ({ colour, setStyle, setKey }) => {
             display: "flex",
             flexWrap: "wrap",
             alignItems: "center",
-            justifyContent: "space-evenly",
           }}
         >
           {relevantStyles.images.map((image, idx) => {

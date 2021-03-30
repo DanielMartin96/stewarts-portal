@@ -1,6 +1,20 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 
+// function that imports all necessary images
+function importAll(r) {
+  let images = {};
+  r.keys().map((item) => {
+    images[item.replace("./", "")] = r(item);
+  });
+  return images;
+}
+
+// imports all the images from the aldridge folder in assets/images
+const colours = importAll(
+  require.context("../../assets/images/colours", false, /.(png|jpe?g|svg)$/)
+);
+
 // These arrays are where you would add new colours
 const highGloss = [
   {
@@ -59,7 +73,7 @@ const satinMatt = [
   },
   {
     name: "Alabaster",
-    src: "",
+    src: colours["Alabaster.jpg"].default,
   },
   {
     name: "Vanilla",
@@ -115,7 +129,7 @@ const satinMatt = [
   },
   {
     name: "Matt Dust Grey",
-    src: "",
+    src: colours["Halifax White Oak.jpg"].default,
   },
   {
     name: "Matt Indigo Blue",
@@ -165,7 +179,11 @@ const ChooseColour = ({ setKey, setColour }) => {
                   <Card.Body
                     style={{ display: "flex", justifyContent: "center" }}
                   >
-                    <img src={colour.src} alt={colour.name} />
+                    <img
+                      src={colour.src}
+                      alt={colour.name}
+                      style={{ width: "100px" }}
+                    />
                   </Card.Body>
                 </Card>
               );
@@ -239,9 +257,16 @@ const ChooseColour = ({ setKey, setColour }) => {
                     <h5 style={{ textAlign: "center" }}>{colour.name}</h5>
                   </Card.Header>
                   <Card.Body
-                    style={{ display: "flex", justifyContent: "center" }}
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
                   >
-                    <img src={colour.src} alt={colour.name} />
+                    <img
+                      src={colour.src}
+                      alt={colour.name}
+                      style={{ margin: "0px" }}
+                    />
                   </Card.Body>
                 </Card>
               );
